@@ -1,0 +1,463 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/logo lengu.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Lengu-turismo</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/jquery-ui.css">				
+			<link rel="stylesheet" href="css/nice-select.css">							
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">				
+			<link rel="stylesheet" href="css/main.css">
+		</head>
+		<body>	
+			<header id="header">
+				<div class="header-top">
+					<div class="container">
+			  		<div class="row align-items-center">
+			  			<div class="col-lg-6 col-sm-6 col-6 header-top-left">
+			  				
+			  			
+							  </div>
+
+			  		 
+			  		</div>			  					
+					</div>
+				</div>
+				<div class="container main-menu">
+					<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="index.html"><img src="img/L-removebg-preview (2).png" alt="" title="" /></a>
+				      </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				           <li><a href="index.html">INICIO</a></li>
+						      	<li><a href="about.html">¿QUE HACER?</a></li>
+				            <li><a href="hotels.html">¿COMO LLEGAR?</a></li>
+				         
+				           </li>	
+				          <li class="menu-has-children"><a href="elements.html">EXPLORA</a>
+				            
+				          </li>					          					          		          
+				          <li><a href="contact.html">CONTACTOS</a></li>
+				        </ul>
+				      </nav><!-- #nav-menu-container -->					      		  
+					</div>
+				</div>
+			</header><!-- #header -->
+			
+			<!-- start banner Area -->
+      <section class="banner-area relative">
+	    <div class="overlay overlay-bg"></div>
+      	<div class="container">
+  
+	  <!-- TIPOGRAFÍAS -->
+	       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  
+	  <!-- CONTENIDO CENTRADO -->
+	     <div class="banner-titulos">
+		   <h1 class="titulo-principal">LENGU-TURISMO</h1>
+		   <h6 class="subtitulo">ATRÉVETE A VIVIRLA</h6>
+		   
+		  
+	
+<div style="text-align: center; margin-top: 20px; position: relative;">
+  <input
+    type="text"
+    id="buscador"
+    placeholder="BUSCA LUGARES"
+    autocomplete="off"
+    style="
+      padding: 12px 20px;
+      width: 90%;
+      max-width: px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      outline: none;
+    "
+  />
+  <div id="sugerencias"
+    style="
+      position: absolute;
+      background: white;
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+      left: 0; right: 0;
+      z-index: 1000;
+      border-radius: 8px;
+      overflow: hidden;
+      font-family: sans-serif;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      top: 45px;
+    ">
+  </div>
+</div>
+
+<script>
+  const lugares = [
+    { nombre: "TERMALES EL 8", id: "termales-8" },
+    { nombre: "ECO CASA EN EL AIRE", id: "eco-casa" },
+    { nombre: "LA CABAÑA", id: "la-cabaña" },
+    { nombre: "FINCA SANTA BÁRBARA", id: "santa-barbara" },
+    { nombre: "CIELO AZUL", id: "cielo-azul" },
+    { nombre: "LA RIVERA", id: "la-rivera" },
+    { nombre: "VILLA SANTA ELENA", id: "villa-santa-elena" },
+    { nombre: "LA QUINTA", id: "la-quinta" },
+    { nombre: "MIRADOR EL GATO", id: "mirador-gato" }
+  ];
+
+  const input = document.getElementById("buscador");
+  const sugerencias = document.getElementById("sugerencias");
+
+  input.addEventListener("input", () => {
+    const valor = input.value.trim().toLowerCase();
+    sugerencias.innerHTML = "";
+
+    if (valor === "") return;
+
+    const filtrados = lugares.filter((lugar) =>
+      lugar.nombre.toLowerCase().includes(valor)
+    );
+
+    filtrados.forEach((lugar) => {
+      const item = document.createElement("div");
+      item.textContent = lugar.nombre;
+      item.style.padding = "10px";
+      item.style.cursor = "pointer";
+      item.style.borderBottom = "1px solid #eee";
+
+      item.addEventListener("click", () => {
+        window.location.href = `elements.html#${lugar.id}`;
+      });
+
+      sugerencias.appendChild(item);
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!input.contains(e.target) && !sugerencias.contains(e.target)) {
+      sugerencias.innerHTML = "";
+    }
+  });
+</script>
+
+  
+	  <!-- ESTILOS -->
+	    <style>
+		  .banner-titulos {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  z-index: 10;
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  text-align: center;
+		  padding: 0 15px;
+		    }
+  
+		  .titulo-principal {
+		  font-family: 'Raleway', sans-serif;
+		  font-weight: 700;
+		  font-size: 3.5rem;
+		  color: #ffffff;
+		  margin: 0;
+		  line-height: 1.2;
+		  text-shadow:
+			-1px -1px 0 #ffffff,
+			1px -1px 0 #ffffff,
+			-1px 1px 0 #ffffff,
+			1px 1px 0 #ffffff,
+			2px 2px 6px rgba(0, 0, 0, 0.8);
+		  animation: aparecer 1s ease-out forwards;
+		  opacity: 0;
+	  	}
+  
+	   	.subtitulo {
+		  font-family: 'Nunito', sans-serif;
+		  font-weight: 600;
+		  font-size: 1.8rem;
+		  color: #ffffff;
+		  margin: 10px 0 20px 0;
+		  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+		  animation: aparecer 1.3s ease-out forwards;
+		  animation-delay: 0.3s;
+		  opacity: 0;
+	  	}
+  
+	  	.boton-pro {
+		  padding: 12px 28px;
+		  font-family: 'Raleway', sans-serif;
+		  font-size: 1rem;
+		  font-weight: 600;
+		  color: #ffffff;
+		  background: linear-gradient(135deg, #005577, #005577);
+		  border: none;
+		  border-radius: 40px;
+		  text-decoration: none;
+		  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+		  transition: all 0.3s ease;
+		  animation: aparecer 1.6s ease-out forwards;
+		  animation-delay: 0.6s;
+		  opacity: 0;
+	  	}
+  
+	  	.boton-pro:hover {
+		  background: linear-gradient(135deg, #005577, #005577);
+		  transform: scale(1.07);
+		  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+		  }
+  
+		  @keyframes aparecer {
+		  from {
+			opacity: 0;
+			transform: translateY(15px);
+		  }
+  
+		  to {
+			opacity: 1;
+			transform: translateY(0);
+		  }
+	  	}
+  
+		/* RESPONSIVE TIPOGRAFÍA PARA CELULARES */
+		  @media (max-width: 576px) {
+		  .titulo-principal {
+			font-size: 2.3rem;
+		  }
+  
+		  .subtitulo {
+			font-size: 1.2rem;
+		  }
+  
+		  .boton-pro {
+			font-size: 0.9rem;
+			padding: 10px 24px;
+		  }
+	  	}
+	    </style>
+	  </div>
+    
+  </section>
+  
+							
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LenguTurismo</title>
+
+  <!-- Fuente Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fb;
+      overflow-x: hidden; /* Evita scroll horizontal */
+    }
+
+    /* Encabezado */
+    .header {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #f8f9fb;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #4a4a4a;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Carrusel */
+    .carousel-container {
+      overflow: hidden;
+      width: 100%;
+      padding: 40px 0;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 20px;
+      animation: scroll 30s linear infinite;
+      width: fit-content;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .card {
+      flex: 0 0 250px;
+      background: linear-gradient(145deg, #ffffff, #e6e6e6);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      height: 250px; /* reducido porque quitamos el botón */
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-bottom: 3px solid #03862f;
+    }
+
+    .card-title {
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #2f3542;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <section class="header">
+    <h1> EXPLORA LENGUPÁ: NATURALEZA QUE TE ATRAPA</h1>
+    <p>
+      SUMÉRGETE EN LOS PAISAJES, PUEBLOS Y AVENTURAS QUE HACEN DE ESTA PROVIDENCIA UN LUGAR ÚNICO.     
+      <strong>¡DESLIZA Y EMPIEZA EL VIAJE!</strong>
+    </p>
+  </section>
+
+  <!-- Carrusel -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <!-- Tarjetas originales -->
+      <div class="card"><img src="img/1..Z.jpg" alt="Zetaquira"><div class="card-title">ZETAQUIRA, BOYACÁ</div></div>
+      <div class="card"><img src="img/i.provisional.jpg" alt="Miraflores"><div class="card-title">MIRAFLORES, BOYACÁ</div></div>
+      <div class="card"><img src="img/i.br.jpg" alt="Berbeo"><div class="card-title">BERBEO, BOYACÁ</div></div>
+      <div class="card"><img src="img/saneduardo.jpg" alt="San Eduardo"><div class="card-title">SAN EDUARDO, BOYACÁ</div></div>
+      <div class="card"><img src="img/paez87.jpg" alt="Paéz"><div class="card-title">PÁEZ, BOYACÁ</div></div>
+      <div class="card"><img src="img/i.cph.jpg" alt="Campohermoso"><div class="card-title">CAMPOHERMOSO, BOYACÁ</div></div>
+
+      <!-- Copias para loop infinito -->
+      <div class="card"><img src="img/1..Z.jpg" alt="Zetaquira"><div class="card-title">ZETAQUIRA, BOYACÁ</div></div>
+      <div class="card"><img src="img/i.provisional.jpg" alt="Miraflores"><div class="card-title">MIRAFLORES, BOYACÁ</div></div>
+      <div class="card"><img src="img/i.br.jpg" alt="Berbeo"><div class="card-title">BERBEO, BOYACÁ</div></div>
+      <div class="card"><img src="img/saneduardo.jpg" alt="San Eduardo"><div class="card-title">SAN EDUARDO, BOYACÁ</div></div>
+      <div class="card"><img src="img/paez87.jpg" alt="Paéz"><div class="card-title">PÁEZ, BOYACÁ</div></div>
+      <div class="card"><img src="img/i.cph.jpg" alt="Campohermoso"><div class="card-title">CAMPOHERMOSO, BOYACÁ</div></div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+                
+						
+							</div>	
+						</div>
+					</div>												
+				</div>
+			</div>	
+		</section>
+			
+			<!-- End popular-destination Area -->	
+					
+			
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TURISMO LENGUPÁ - MISIÓN Y VISIÓN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-200">
+
+
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+      <h2 class="text-5xl font-semibold text-green-700">NUESTRA MISIÓN Y VISIÓN</h2>
+      <p class="text-lg text-emerald-700">PROMOVIENDO EL TURISMO RESPONSABLE EN LA HERMOSA PROVINCIA DE LENGUPÁ</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <!-- Misión -->
+      <div class="bg-white rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition duration-300 border-t-8 border-green-700">
+        <div class="flex items-center mb-6">
+          <div class="text-4xl mr-4">🚴‍♂️</div>
+          <h3 class="text-2xl font-semibold text-green-700">NUESTRA MISIÓN</h3>
+        </div>
+        <p class="text-gray-700 text-lg">
+        IMPULSAR EL TURISMOECO-CULTURAL EN LENGUPÁ, CONECTANDO A LOS VIAJEROS CON PAISAJES UNICOS, ACTIVIDADES AL AIRE LIBRE Y TRADICIONES VIVAS QUE ENRIQUECEN TANTO AL VISITANTE COMO A NUESTRAS COMUNIDADES.
+        </p>
+      </div>
+      <!-- Visión -->
+      <div class="bg-white rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition duration-300 border-t-8 border-green-700">
+        <div class="flex items-center mb-6">
+          <div class="text-4xl mr-4">🏞️</div>
+          <h3 class="text-2xl font-semibold text-green-700">NUESTRA VISIÓN</h3>
+        </div>
+        <p class="text-gray-700 text-lg">
+         CONVERTIR A LENGUPÁ EN UN DESTINO TURÍSTICO SOSTENIBLE, RECONOCIDO POR SU BIODIVERSIDAD Y EXPERIENCIAS AUTÉNTICAS QUE INVITAN A DESCUBRIR LA COLOMBIA PROFUNDA Y NATURAL.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+  
+  <!-- BANNER FINAL -->
+  <section style="background:url('banner.jpg') center/cover no-repeat; padding:80px 20px;">
+	<div style="background-color:#2e7d32; padding:40px; border-radius:10px; max-width:700px; margin:auto; text-align:center;">
+	  <h2 style="color:white; font-size:32px;">¡SIGUE EXPLORANDO LENGUPÁ!</h2>
+	  <p style="color:#eee; font-size:18px;">NAVEGA POR NUESTRA PÁGINA Y DESCUBRE LOS MEJORES DESTINOS, RUTAS Y EXPERIENCIAS.</p>
+	
+	</div>
+  </section>
+		
